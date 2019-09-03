@@ -24,7 +24,7 @@ public class BreweryClient {
         this.apiHost = apiHost;
     }
 
-    public BeerDto getBeerById(UUID id){
+    public BeerDto getBeerById(UUID id) {
         return restTemplate.getForObject(apiHost + BEER_PATH_V2 + id.toString(), BeerDto.class);
     }
 }
